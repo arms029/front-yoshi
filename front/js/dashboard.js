@@ -44,4 +44,13 @@ function exibirDash(dados) {
     console.log(dados)
 }
 
+function logout() {
+    localStorage.removeItem("userLogged");
+    window.location = "index.html"
+}
+
+function retornar() {
+    window.location = "parceiros.html"
+}
+
 
