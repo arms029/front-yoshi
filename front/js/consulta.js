@@ -59,7 +59,7 @@ function exibirDados(dados) {
         //let valor = new valorTransacional(dados[index].valor) // transforma o texto em um obejto Date
         //let valorFormatado = valor.toLocaleString('pt-br',{style:'currency', currency: 'BRL'});
         // tabela += '<tr> <td>' + dados[index].descricao + '</td><td>' + dados[index].valor + '</td><td>' + dados[index].data  + '</td> </tr>'
-        tabela += `<tr><td style="text-align: center; vertical-align: middle;"> ${dados[index].nome} </td><td style="text-align: right; vertical-align: middle;"> ${dados[index].volumeTransacional} </td></tr>`
+        tabela += `<tr><td style="text-align: center; vertical-align: middle;"> ${dados[index].nome} </td><td style="text-align: right; vertical-align: middle;"> ${dados[index].volumeTransacional.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})} </td></tr>`
         //tabela += `<tr><td style="text-align: center; vertical-align: middle;"> ${dados[index].nome} </td><td style="text-align: right; vertical-align: middle;"> ${valorFormatado} </td></tr>`
     }
 

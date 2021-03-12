@@ -37,7 +37,7 @@ function validaResposta(resultado) {
 }
 
 function exibirDash(dados) {
-    document.getElementById("parceiro").innerHTML = dados[0].agente + " / " + dados[0].volumeTransacional
+    document.getElementById("parceiro").innerHTML = dados[0].agente + " / " + dados[0].volumeTransacional.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
     document.getElementById("parceiroSucesso").innerHTML = dados[0].count
     document.getElementById("parceiroFalhas").innerHTML = dados[1].count
     document.getElementById("parceiroFraudes").innerHTML = dados[2].count
