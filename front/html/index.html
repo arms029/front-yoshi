@@ -30,17 +30,25 @@
 
 <body>
     <div class="container-fluid">
-        <!-- Criando uma nova linha para inserir o formulário-->
+
         <div class="row">
             <div class="col-lg-4 col-md-4 col-sm-4"></div>
             <div class="col-lg-4 col-md-4 col-sm-4" align="center">
-                <h1>DashCard System</h1>
-            </div><br>
-            <div class="col-lg-4 col-md-4 col-sm-4" align="right"></div>
-        </div>
+                <div>
+                    <img src="../imagens/logo.png" width="300px" >
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-" align="right" id="logout"><button type="submit"
+                    class="btn btn-primary" id="botao" onclick="logout()">Sair</button></div>
+        </div><br><br>
+
+
         <div class="row">
-            <div class="col-lg-4 col-md-4 col-sm-4"></div>
-            <div class="col-lg-4 col-md-4 col-sm-4">
+            <div class="col-lg-4 col-md-3 col-sm-4"></div>
+            <div class="col-lg-4 col-md-6 col-sm-4">
+
+
+
                 <!-- Criando formulário-->
                 <form>
                     <div id="msgError"></div>
@@ -55,17 +63,15 @@
 
                         <input type="password" class="form-control" id="txtSenha">
                     </div>
-                    <!--<button type="submit" class="btn btn-primary" id="botao">Enviar</button>-->
                     <button onclick="login(event)" class="btn btn-primary" id="botao">Enviar</button>
                 </form>
             </div>
-            <div class="col-lg-4 col-md-4 col-sm-4"></div>
+            <div class="col-lg-4 col-md-3 col-sm-4"></div>
         </div>
         <div class="row" id="footer">
             <div class="col-lg-4 col-md-4 col-sm-4"></div>
             <div class="col-lg-4 col-md-4 col-sm-4"></div>
-            <div class="col-lg-4 col-md-4 col-sm-4" align="right"><img src="../imagens/logo.png" width="100"
-                    height="51"></div>
+            <div class="col-lg-4 col-md-4 col-sm-4"></div>
         </div>
     </div>
 

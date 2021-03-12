@@ -8,6 +8,7 @@ function validaLogin() {
     let objUser = JSON.parse(usuario)
 
     document.getElementById("dadosUser").innerHTML = objUser.nome + ' (' + objUser.racf + ')';
+    document.getElementById("userFoto").src = objUser.linkFoto;
     consultaAgente()
 }
 
@@ -35,7 +36,6 @@ function validaResposta(resultado) {
 function exibirParceiros(dados) {
     let dropdown = ' <select class="form-control" onchange="exibirDash()" id="optionAgent"><option disabled selected></option>';
     for (let index = 0; index < dados.length; index++) {
-        // tabela += '<tr> <td>' + dados[index].descricao + '</td><td>' + dados[index].valor + '</td><td>' + dados[index].data  + '</td> </tr>'
         dropdown += `<option value="${dados[index].id}">${dados[index].nome}</option>`
     }
 
@@ -53,14 +53,10 @@ function exibirDash() {
 
 function exibirDados(dados) {
 
-    let tabela = '<table class="table table-hover table-striped table-bordered" style="text-align: center; vertical-align: middle;"> <tr> <th>Parceiro</th> <th>Volume Transacional</th></tr>'
+    let tabela = '<table class="table table-hover table-striped table-bordered" style="text-align: center; vertical-align: middle;"> <tr> <th>PARCEIRO</th> <th>VOLUME TRANSACIONAL</th></tr>'
 
     for (let index = 0; index < dados.length; index++) {
-        //let valor = new valorTransacional(dados[index].valor) // transforma o texto em um obejto Date
-        //let valorFormatado = valor.toLocaleString('pt-br',{style:'currency', currency: 'BRL'});
-        // tabela += '<tr> <td>' + dados[index].descricao + '</td><td>' + dados[index].valor + '</td><td>' + dados[index].data  + '</td> </tr>'
         tabela += `<tr><td style="text-align: center; vertical-align: middle;"> ${dados[index].nome} </td><td style="text-align: right; vertical-align: middle;"> ${dados[index].volumeTransacional.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})} </td></tr>`
-        //tabela += `<tr><td style="text-align: center; vertical-align: middle;"> ${dados[index].nome} </td><td style="text-align: right; vertical-align: middle;"> ${valorFormatado} </td></tr>`
     }
 
     tabela += '</table>'
